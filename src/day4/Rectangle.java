@@ -1,13 +1,13 @@
 package day4;
 
 public class Rectangle {
-    private double length;
+    protected double length;
     private double width;
 
     public Rectangle() {
-        System.out.println("This is default constructor");
-        length = 20;
-        width = 10;
+//        System.out.println("This is default constructor");
+//        length = 20;
+//        width = 10;
     }
 
     public Rectangle(double length, double width) {
@@ -32,10 +32,11 @@ public class Rectangle {
         this.width = width;
     }
 
-    double calculateArea(){
+    public double calculateArea(){
         return length*width;
     }
-    double calculatePerimeter(){
-        return 2*(length+width);
+
+    public double calculatePerimeter(){
+        return length*2 + width*2 ;
     }
 }
